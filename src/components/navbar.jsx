@@ -5,13 +5,14 @@ import * as navstyle from '../cssmodules/navbar.module.scss'
 
 const Navbar = () => {
     //Checking if current page is home, if so use a different class
-    const [home, setHome] = useState(false)
-    useEffect(() => {
-        if (window.location.pathname === "/") {
-            setHome(true)
-        }
-        else { setHome(false) }
-    },[])
+
+    // const [home, setHome] = useState(false)
+    // useEffect(() => {
+    //     if (window.location.pathname === "/") {
+    //         setHome(true)
+    //     }
+    //     else { setHome(false) }
+    // },[])
 
     const [menuOpen, setMenuOpen] = useState(false)
 
@@ -19,7 +20,7 @@ const Navbar = () => {
 
     return (
         <div >
-            <nav className={home === true ? navstyle.mobilenavhome : navstyle.mobilenav}  >
+            <nav className={navstyle.mobilenavhome }  >
                 <button className={navstyle.iconholder}>
                     <div className={menuOpen ? `${navstyle.hamburgerMenu} ${navstyle.active}` : navstyle.hamburgerMenu}
                         onClick={() => setMenuOpen(!menuOpen)}
@@ -47,7 +48,7 @@ const Navbar = () => {
 
             </nav>
 
-            <nav className={home === true ? navstyle.navhome : navstyle.nav}  >
+            <nav className={ navstyle.nav}  >
                 <ul>
                     <li>
                         <Link to="/">Home</Link>
