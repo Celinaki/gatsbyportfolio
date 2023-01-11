@@ -1,0 +1,114 @@
+.body {
+    font-family: 'Italiana', serif;
+    font-weight: 600;
+    background: hsla(302, 82%, 76%, 0.3);
+    background: linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
+    background: -moz-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
+    background: -webkit-linear-gradient(135deg, hsla(302, 82%, 76%, 0.3) 0%, hsla(258, 40%, 68%, 0.3) 100%);
+    min-height: 100vh;
+    padding: 3rem 0rem 10rem 0rem;
+
+    h1 {
+        margin: 0rem 0rem 3.9rem 10%;
+        line-height: 1.5;
+    }
+
+    .aboutwrapper {
+        width: 80%;
+        margin: auto;
+        position: relative;
+        font-weight: bolder;
+
+        .firstp {
+            background-color: white;
+            border-radius: 2.5px;
+            padding: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        img {
+            // background-image: url("../images/eugene-golovesov-ZRJGQuvVHKk-unsplash.jpg");
+            // background-image: url('../images/eugene-golovesov-VJ6aRAcrj-Y-unsplash.jpg');
+            width: 65%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: -5%;
+            object-fit: cover;
+            // background-size: cover;
+            opacity: .25;
+            // border-radius: 0% 20%;
+            object-position: bottom;
+            animation: circulate 10s infinite;
+        }
+
+        @keyframes circulate {
+            0% {
+                border-radius: 0% 20% 0% 20%;
+            }
+
+            25% {
+                border-radius: 10% 25% 10% 25%;
+
+            }
+
+            50% {
+                border-radius: 15% 5% 15% 5%;
+            }
+
+            100% {
+                border-radius: 0% 20% 0% 20%;
+            }
+        }
+
+
+        p {
+            max-width: 50%;
+            line-height: 1.5;
+        }
+        span{
+             h2{
+                margin: 3rem 0rem 1.1rem 0rem;
+
+            }
+        }
+        ul {
+
+            list-style-type: ('ღ');
+            padding: 0.2rem 0.9rem;
+
+            li {
+                padding: 0.5rem 0.5rem;
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 1210px) and (min-width:235px) {
+    .body {
+        .aboutwrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .firstp {
+                max-width: 90%;
+                // margin-left: 5%;
+            }
+            img{
+                top: -2%;
+                height: 110%;
+                width: 100%;
+                border-radius: 0 !important;
+            }
+       
+        }
+    }
+}
